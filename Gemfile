@@ -50,7 +50,7 @@ group :development do
   gem "web-console"
   # I don't know how to lazily load this engine. At least provide an alternative for
   # running Rake tasks without loading this engine by setting FAST_BOOT=1.
-  gem "graphiql-rails", require: ENV["FAST_BOOT"] ? false : ["graphql", "graphiql/rails"]
+  gem "graphiql-rails", require: ENV["FAST_BOOT"] ? false : [ "graphql", "graphiql/rails" ]
 end
 
 group :test do
@@ -74,4 +74,3 @@ group :lazily_loaded do
   gem "graphql", "~> 2.3"
   gem "factory_bot_rails", "~> 6.4"
 end
-
