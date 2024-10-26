@@ -70,3 +70,4 @@ end
 group :lazily_loaded do
   gem "graphql", "~> 2.3"
 end
+gem "graphiql-rails", group: :development
