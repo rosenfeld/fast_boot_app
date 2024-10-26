@@ -55,3 +55,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :lazily_loaded do
+  gem "rspec", "~> 3.13.0"
+  gem "rspec-rails", "~> 7.0.0"
+end
