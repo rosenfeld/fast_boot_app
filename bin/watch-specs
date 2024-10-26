@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby -I spec
+
+require "bundler/setup"
+ENV["BOOTSNAP_CACHE_DIR"] = File.expand_path "../tmp/cache", __dir__
+require "bootsnap/setup"
+require "rspec/core"
+
+ENV["WATCHING_SPECS"] = "true"
+
+require "rails_helper"
+
+ActiveRecord::Base.connection_pool.disconnect
+
+ARGV << "spec" if ARGV.empty?
+last_specs = ARGV
+
+while true
+  Process.fork do
+    RSpec::Core::Runner.run last_specs
+  end
+  Process.wait
+
+  puts "Which tests to run? Press ENTER to run the same previous tests: #{last_specs}.\n" +
+    "Enter 'exit' or Ctrl+D to stop. 'reset' to run the original tests: #{ARGV}."
+  specs = STDIN.gets&.chomp&.split(" ")
+  break if specs.nil? || specs == [ "exit" ]
+  specs = last_specs if specs.empty?
+  specs = ARGV if specs == [ "reset" ]
+  specs = specs.map do |spec|
+    next spec if spec.start_with?('-')
+    spec.start_with?("spec") ? spec : "spec/#{spec}"
+  end
+
+  last_specs = specs
+
+  RSpec.configuration.start_time = Time.now
+
+  Rails.application.reloader.reload!
+end
