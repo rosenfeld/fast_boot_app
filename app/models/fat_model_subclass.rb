@@ -1,0 +1,2 @@
+class FatModelSubclass < FatModel
+end
