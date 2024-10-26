@@ -66,3 +66,7 @@ end
 group :lazily_loaded_test do
   gem "rspec", "~> 3.13.0"
 end
+
+group :lazily_loaded do
+  gem "graphql", "~> 2.3"
+end
