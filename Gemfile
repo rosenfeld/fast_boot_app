@@ -67,6 +67,7 @@ group :unloaded do
   gem "devise", "~> 4.9"
   gem "stackprof", "~> 0.2.26"
   gem "tzinfo-data", "~> 1.2024" # loads tzinfo more quickly
+  gem "bumbler", "~> 0.9.0"
 end
 
 group :lazily_loaded_test do
