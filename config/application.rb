@@ -10,6 +10,11 @@ skip_eager_load = !defined?(Spring) && (Rails.env.development? || (Rails.env.tes
 bundler_groups << :lazily_loaded << "lazily_loaded_#{Rails.env}" unless skip_eager_load
 Bundler.require(*bundler_groups)
 
+if $0.end_with?("rails") && ENV["ORIGINAL_ARGV"].start_with?(/g(enerate)? /)
+  require "rspec-rails"
+  require "factory_bot_rails"
+end
+
 module FastBootApp
   class Application < Rails::Application
     # config.active_record.query_log_tags_enabled = true
