@@ -65,6 +65,7 @@ group :unloaded do
   gem "spring", "~> 4.2.1"
   gem "spring-commands-rspec", "~> 1.0.4"
   gem "devise", "~> 4.9"
+  gem "stackprof", "~> 0.2.26"
 end
 
 group :lazily_loaded_test do
