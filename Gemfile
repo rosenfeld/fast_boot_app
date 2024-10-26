@@ -59,4 +59,5 @@ end
 group :lazily_loaded do
   gem "rspec", "~> 3.13.0"
   gem "rspec-rails", "~> 7.0.0"
+  gem "spring", "~> 4.2.1"
 end
