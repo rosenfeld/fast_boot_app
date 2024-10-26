@@ -323,6 +323,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2024.2)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.6.0)
     useragent (0.16.10)
     warden (1.2.9)
@@ -382,7 +384,7 @@ DEPENDENCIES
   stackprof (~> 0.2.26)
   stimulus-rails
   turbo-rails
-  tzinfo-data
+  tzinfo-data (~> 1.2024)
   web-console
 
 BUNDLED WITH

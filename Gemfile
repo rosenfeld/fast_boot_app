@@ -26,7 +26,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+# gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -66,6 +66,7 @@ group :unloaded do
   gem "spring-commands-rspec", "~> 1.0.4"
   gem "devise", "~> 4.9"
   gem "stackprof", "~> 0.2.26"
+  gem "tzinfo-data", "~> 1.2024" # loads tzinfo more quickly
 end
 
 group :lazily_loaded_test do
