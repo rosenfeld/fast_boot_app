@@ -1,24 +1,9 @@
-# README
+# Fast Boot Rails app example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I've published an article named [Why is your Rails app boot
+slow?](https://rosenfeld.page/articles/ruby-rails/2024_10_25_why_is_your_rails_app_boot_slow).
 
-Things you may want to cover:
+This app is a sample Rails app using the approaches described in that article
+to speed up the app's boot time and testing.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check out the article for more details.
