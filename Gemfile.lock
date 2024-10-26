@@ -231,6 +231,9 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.3.8)
+    routes_lazy_routes (0.4.3)
+      actionpack
+      railties
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -366,6 +369,7 @@ DEPENDENCIES
   jbuilder
   puma (>= 5.0)
   rails (~> 7.2.1, >= 7.2.1.1)
+  routes_lazy_routes (~> 0.4.3)
   rspec (~> 3.13.0)
   rspec-rails (~> 7.0.0)
   rubocop-rails-omakase
