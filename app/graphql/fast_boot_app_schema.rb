@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "graphql"
+
 class FastBootAppSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)

@@ -48,6 +48,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # I don't know how to lazily load this engine. At least provide an alternative for
+  # running Rake tasks without loading this engine by setting FAST_BOOT=1.
+  gem "graphiql-rails", require: ENV["FAST_BOOT"] ? false : ["graphql", "graphiql/rails"]
 end
 
 group :test do
@@ -61,10 +64,6 @@ group :unloaded do
   gem "spring", "~> 4.2.1"
   gem "spring-commands-rspec", "~> 1.0.4"
   gem "devise", "~> 4.9"
-end
-
-group :lazily_loaded_development do
-  gem "graphiql-rails"
 end
 
 group :lazily_loaded_test do

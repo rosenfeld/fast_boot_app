@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  if Rails.env.development?
-    require "graphiql/rails"
+  if Rails.env.development? && defined?(GraphiQL)
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
   post "/graphql", to: "graphql#execute"

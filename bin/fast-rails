@@ -1,0 +1,2 @@
+#!/bin/sh
+FAST_BOOT=1 bin/rails $@
