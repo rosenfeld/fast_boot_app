@@ -4,7 +4,11 @@ require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+# Bundler.require(*Rails.groups)
+bundler_groups = Rails.groups
+skip_eager_load = !defined?(Spring) && (Rails.env.development? || (Rails.env.test? && !ENV["CI"].present?))
+bundler_groups << :lazily_loaded << "lazily_loaded_#{Rails.env}" unless skip_eager_load
+Bundler.require(*bundler_groups)
 
 module FastBootApp
   class Application < Rails::Application

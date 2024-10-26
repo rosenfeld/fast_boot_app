@@ -56,9 +56,12 @@ group :test do
   gem "selenium-webdriver"
 end
 
-group :lazily_loaded do
-  gem "rspec", "~> 3.13.0"
+group :unloaded do
   gem "rspec-rails", "~> 7.0.0"
   gem "spring", "~> 4.2.1"
   gem "spring-commands-rspec", "~> 1.0.4"
+end
+
+group :lazily_loaded_test do
+  gem "rspec", "~> 3.13.0"
 end
