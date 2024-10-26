@@ -63,6 +63,10 @@ group :unloaded do
   gem "devise", "~> 4.9"
 end
 
+group :lazily_loaded_development do
+  gem "graphiql-rails"
+end
+
 group :lazily_loaded_test do
   gem "rspec", "~> 3.13.0"
 end
@@ -70,4 +74,3 @@ end
 group :lazily_loaded do
   gem "graphql", "~> 2.3"
 end
-gem "graphiql-rails", group: :development
