@@ -75,6 +75,6 @@ group :lazily_loaded_test do
 end
 
 group :lazily_loaded do
-  gem "graphql", "~> 2.3"
+  gem "graphql", "~> 2.4"
   gem "factory_bot_rails", "~> 6.4"
 end
