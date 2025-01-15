@@ -65,7 +65,7 @@ group :unloaded do
   gem "spring", "~> 4.2.1"
   gem "spring-commands-rspec", "~> 1.0.4"
   gem "devise", "~> 4.9"
-  gem "stackprof", "~> 0.2.26"
+  gem "stackprof", "~> 0.2.27"
   gem "tzinfo-data", "~> 1.2024" # loads tzinfo more quickly
   gem "bumbler", "~> 0.9.0"
 end
